@@ -1,22 +1,56 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: "Quickstart"
+description: "Learn how to setup your campaign and use Blurr in minutes"
+icon: rabbit
 ---
-
-## Setup your development
-
-Learn how to update your docs locally and and deploy them to the public.
 
 ### Edit and preview
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
+  <Accordion icon="github" title="Import Twilio Phone Numbers">
     During the onboarding process, we created a repository on your Github with
     your docs content. You can find this repository on our
     [dashboard](https://dashboard.mintlify.com). To clone the repository
     locally, follow these
     [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
     in your terminal.
+    <AccordionGroup>
+      <Accordion icon="terminal" title="Buy a Phone Number via Twilio">
+        If you don’t already have a number in Twilio, you can purchase one by
+        going to your Twilio console’s “Buy a number” section:
+        <img src="/images/buy-phone-number-twilio.png" />
+        Once you’ve purchased a number, it will immediately be ready for import
+        into Vapi.
+      </Accordion>
+    </AccordionGroup>
+    <AccordionGroup>
+      <Accordion icon="terminal" title="Locate Twilio Account SID & Auth Token">
+      To complete the import on Vapi’s side, we will need to grab our Twilio “Account SID” & “Auth Token”.
+
+        You should see a section for “API keys & tokens”, the credentials we will need for the import will live here.
+
+      <img src="/images/twilio-api-key-nav.png" />
+      Once we are in our “API keys & tokens” section, we will grab the Account SID & Auth
+      Token:
+
+      <img src="/images/twilio-credentials.png" />
+      We will use both of these credentials in the next step of importing via the Dashboard.
+
+</Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion icon="terminal" title="Import via Dashboard">
+    Navigate to the “Phone Numbers” section & click the “Import” button.
+    
+    There you will input your phone number, as well as the credentials you retrieved
+    in the previous step:
+
+    Your number is now ready to be attached to an assistant for inbound or outbound phone calling.
+
+  </Accordion>
+</AccordionGroup>
+
   </Accordion>
   <Accordion icon="rectangle-terminal" title="Preview changes">
     Previewing helps you make sure your changes look as intended. We built a
