@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://blurr.app"
+      "url": "https://blurr.app"
     }
   ],
   "security": [
