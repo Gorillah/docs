@@ -2,14 +2,14 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Blurr",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo-2.png",
+    "light": "/logo/logo.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "light": "#00FFD1",
+    "dark": "#0004FF",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -31,38 +31,47 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [],
+  "anchors": [
+    {
+      "name": "Homepage",
+      "icon": "house",
+      "url": "https://blurr.app"
+    },
+    {
+      "name": "Dashboard",
+      "icon": "phone-volume",
+      "url": "https://blurr.app/dashboard"
+    }
+  ],
   "navigation": [
+    {
+      "group": "",
+      "pages": ["introduction"]
+    },
     {
       "group": "Get Started",
       "pages": [
-        "quickstart",
-        "get-started/dashboard",
+        "get-started/quickstart",
         "get-started/campaign",
+        "get-started/import-twilio-number",
         "get-started/inbound-calling",
         "get-started/outbound-calling"
       ]
     },
     {
       "group": "General",
-      "pages": ["introduction", "general/support", "general/faq"]
+      "pages": ["general/support", "general/faq"]
     },
     {
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]
     },
     {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Calls",
+      "pages": ["api-reference/calls/create-phone-call"]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "instagram": "https://instagram.com/blurrai"
   }
 }

@@ -1,33 +1,43 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
+description: "Blurr API Introduction"
 ---
 
 <Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
+  If you're looking to enhance your application with complex call interactions tailored to your custom CRM needs, We offer customizable solutions that can seamlessly integrate with platforms like GHL.
+
+Contact us at [contact@blurr.app](mailto:contact@blurr.app)
+to discuss your requirements. Our team is dedicated to delivering exceptional results for even the most intricate use cases.
+
 </Note>
 
-## Welcome
+# Introduction
+
+Welcome to the Blurr API documentation! Blurr is a cutting-edge platform offering AI-powered calling solutions for both inbound and outbound communications. Our API allows you to integrate our advanced calling features into your applications seamlessly, enabling automated and intelligent interactions with your customers.
+
+## What You Can Do with Blurr API
+
+With the Blurr API, you can:
+
+- **Initiate Outbound Calls**: Automate outbound calls to your customers for various use cases such as marketing campaigns, reminders, and notifications.
+- **Handle Inbound Calls**: Use AI to manage and respond to incoming calls, providing your customers with quick and accurate information.
+- **Customizable Interactions**: Tailor the conversation flow to suit your business needs, ensuring a personalized customer experience.
+- **Track and Monitor Calls**: Access detailed call logs and analytics to monitor performance and improve your calling strategies.
+
+## Getting Started
+
+To start using the Blurr API, follow these simple steps:
+
+1. **Sign Up**: Create an account on our [Blurr website](https://www.blurr.app/auth/signup).
+2. **Get Your API Key**: Once logged in, navigate to the Settings -> API section to generate your API key.
+3. **Read the Documentation**: Familiarize yourself with our API endpoints, request parameters, and response formats.
 
 There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
-
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+The Blurr API uses Bearer Token authentication. Include your API key in the `Authorization` header of your requests as follows:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```http
+Authorization: Bearer YOUR_API_KEY
 ```
