@@ -59,8 +59,8 @@
       ]
     },
     {
-      "group": "General",
-      "pages": ["general/support", "general/faq"]
+      "group": "Legal",
+      "pages": ["legal/support", "legal/faq", "legal/refund-policy"]
     },
     {
       "group": "API Documentation",
