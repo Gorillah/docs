@@ -55,7 +55,8 @@
         "get-started/campaign",
         "get-started/import-twilio-number",
         "get-started/inbound-calling",
-        "get-started/outbound-calling"
+        "get-started/outbound-calling",
+        "get-started/make_calls_in_ghl"
       ]
     },
     {

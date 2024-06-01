@@ -1,0 +1,95 @@
+---
+title: "GHL"
+description: "Make calls from GHL workflow"
+icon: table-columns
+---
+
+# How to Use Our API to Make Outbound Calls in GoHighLevel Workflow
+
+This tutorial will guide you through the process of setting up an outbound call in GoHighLevel (GHL) workflow using your API when a action is submitted.
+
+## Step 1: Generate API Key
+
+1. **Navigate to Integration Settings**:
+
+   - Log in to your GoHighLevel account.
+   - Go to **Integrations**.
+
+2. **Generate API Key**:
+   - Under the **REST API** section, click on **Generate API Key**.
+   - Save this API key as you will need it later.
+
+## Step 2: Create a Custom Webhook in GHL Workflow
+
+1. **Access Workflows**:
+
+   - From your GoHighLevel dashboard, navigate to **Automations** > **Workflows**.
+   - Select or create a workflow where you want to initiate the call.
+
+2. **Add Custom Webhook Action**:
+
+   - In your workflow, click on `+` to add a new action.
+   - Select **Custom Webhook** from the list of actions.
+
+3. **Configure the Custom Webhook**:
+
+   - **Action Name**: Name it whatever you like, e.g., `Initiate Outbound Call`.
+   - **Event**: Choose `CUSTOM`.
+   - **URL**: Enter `https://blurr.app/api/v1/call`.
+   - **Authorization**: Select `Bearer Token`.
+   - **Token**: Paste the API key you generated from the **REST API** settings.
+   - **Content Type**: Choose `application/json`.
+
+4. **Set Up the Raw Body**:
+
+   - In the **Raw Body** section, paste the following JSON template:
+
+     ```json
+     {
+       "customerNumber": "+1234567890",
+       "assistantId": "20da6de2-ddc3-2982-a03e-602f694f1234",
+       "phoneNumberId": "879326bc-6e05-431c-9306-41341f0471234"
+     }
+     ```
+
+   - Replace `+1234567890` with the dynamic field that corresponds to the phone number.
+   - Update `"assistantId"` with the actual Assistant ID from the assistant settings under its name.
+   - Update `"phoneNumberId"` with the actual Phone Number ID from your Twilio integration (found under the UID in the phone number settings).
+
+## Step 3: Obtain Required IDs
+
+1. **Assistant ID**:
+
+   - Navigate to the assistant settings in your Blurr app.
+   - Copy the Assistant ID from.
+
+2. **Phone Number ID**:
+   - Go to your Twilio integration in the Blurr app.
+   - Edit the phone number you wish to use for the outbound call.
+   - Copy the ID under the phone number's name.
+
+## Step 4: Save and Activate Workflow
+
+1. **Save Workflow**:
+
+   - After configuring the webhook, save your workflow.
+
+2. **Activate Workflow**:
+   - Ensure your workflow is active to start making outbound calls when the action is initiated.
+
+## Testing the Setup
+
+1. **Submit Form**:
+
+   - Test by submitting the a form linked to your workflow.
+   - Ensure that the phone number field matches the placeholder `+1234567890` used in your JSON body.
+
+2. **Verify Call**:
+   - Check the Blurr.app dashboard under **Assistant** to see the call details.
+   - Confirm that the call was made to the customer number provided.
+
+## Conclusion
+
+That's it! You've now successfully set up your GoHighLevel workflow to make outbound calls using Blurr's API. Whenever the specified action is initiated, an outbound call will be initiated, and the details will be available on the Blurr.app dashboard.
+
+If you have any questions or run into any issues, feel free to reach out for support.
